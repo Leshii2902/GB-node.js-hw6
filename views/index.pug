@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    title Список задач
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    meta(charset='utf-8')
+  body
+    .container
+      h1.text-danger= title
+      table.table
+                each task in tasks
+                    tr
+
+                        td.id
+
+                            p=task.id
+                        td.text
+
+                            p=task.text
+                        td.completed
+                            case task.completed
+                              when 'true'
+                                p(style='color:red;') Выполнено
+                              when 'false'
+                                p(style='color:brown;') Не выполнено
+                              default
+                                p(style='color:brown;') Не выполнено
+                        td
+                            a(href='/user/edit/' + task.id)
+                              button.btn.btn-default(style='margin-right:10px;') Редактировать задачу
+                            a(href='/user/delete/' + task.id)
+                              button.btn.btn-danger Удалить задачу
+
+      a(href='/user/new/')
+        button.btn.btn-success(style='margin-top:11px;') Добавить новую задачу
+      br
+      br
+      a(href='/') На главную
+      br
+      a(href='/logout/') Выход

@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+  head
+    title Редактировать задачу
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    meta(charset='utf-8')
+  body
+    .container
+      h4.text-danger Редактировать задачу
+      h5
+        p(style='font-size:17px;') id задачи:
+        p(style='font-size:17px;')=id
+        p 
+            form(method='POST', action='/user')
+                .form-group
+                    label(for="text") Название задачи
+                    br
+                    input(type="text" id="text" name="text" value=text)
+                .form-group
+                    label(for="completed") Выполнено или нет
+                    br
+                    input(type='radio', name='completed', value='true' required)
+                    |  Выполнено
+                    br
+                    input(type='radio', name='completed', value='false' required)
+                    |  Не выполнено
+                    br
+                .form-group
+                    input(type="hidden" name="id" value=id)
+                .form-group
+                    button.btn.btn-warning(type="submit") Сохранить изменения
+                    br
+                    br
+                    a(href='/') На главную
+                    br
+                    a(href='/logout/') Выход
+
+
+
+        
+      

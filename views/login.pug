@@ -1,0 +1,70 @@
+doctype html
+html(lang='en')
+  head
+    title Авторизация
+    meta(charset='utf-8')
+    style.
+      .container {
+        width: 800px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-family: Arial;
+        text-align: center;
+        text-align: center;
+        color: #b72831;
+        font-weight: normal;
+      }
+
+      h3 {
+        font-family: Arial;
+      }
+
+      span {
+        font-family: Arial;
+        margin: 2px;
+        line-height: 20px;
+      }
+
+      input {
+        line-height: 20px;
+      }
+
+      input[type="submit"] {
+        margin-top: 5px;
+      }
+
+      a {
+        font-family: Arial;
+        text-decoration: none;
+        color: #337ab7;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    body
+    .container
+      h1 Авторизация
+      h3 Введите логин и пароль для авторизации.
+      form(method='POST', action='/login')
+        span Логин
+        br
+        input(type='text' name='username')
+        br
+        span Пароль
+        br
+        input(type='password' name='password')
+        br
+        input(type='submit' value='Войти')
+        br
+        input(type='checkbox' name='remember')
+        label Запомни меня
+        br
+        br
+        a(href='/') На главную
+
+
+
+

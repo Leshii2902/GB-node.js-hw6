@@ -1,0 +1,48 @@
+doctype html
+html(lang='en')
+  head
+    title Главная страница
+    meta(charset='utf-8')
+    style.
+      .container {
+        width: 800px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-family: Arial;
+        text-align: center;
+        color: #b72831;
+        font-weight: normal;
+      }
+
+      p {
+        font-family: Arial;
+        font-size: 20px;
+      }
+
+      a {
+        font-family: Arial;
+        text-decoration: none;
+        color: #337ab7;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+  body
+    .container
+      h1 Добро пожаловать!
+      p Для локальной авторизации кликните ссылку "Авторизация".
+      a(href='/login') Авторизация
+      br
+      br
+      p Для авторизации через Яндекс кликните ссылку "Авторизация через Яндекс".
+      a(href='/login_ya') Авторизация через Яндекс
+      br
+      br
+      p Если Вы авторизованы, можно сразу пройти в базу данных по ссылке "База данных".
+      a(href='/user') База данных
+
+
